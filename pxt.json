@@ -1,0 +1,12 @@
+{
+    "name": "01-arcade-shark",
+    "description": "MakeCode Arcade hra pro začátečníky: žralok loví rybičky. / Beginner MakeCode Arcade game: shark eats fish.",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "preferredEditor": "tsprj"
+}
