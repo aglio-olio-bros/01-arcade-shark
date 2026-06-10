@@ -1,7 +1,5 @@
-function vytvorRybu (sni1: Image, sni2: Image, rychlost: number) {
+function vytvorRybu (sni1: Image, sni2: Image) {
     ryba3 = sprites.create(sni1, SpriteKind.Food)
-    ryba3.setPosition(0, randint(0, 120))
-    ryba3.vx = rychlost
     animation.runImageAnimation(
     ryba3,
     [sni1, sni2],
@@ -35,6 +33,7 @@ let zkarlok = sprites.create(img`
     ...........cccccfbdbbfc.............
     .................fffff..............
     `, SpriteKind.Player)
+zkarlok.setStayInScreen(true)
 animation.runImageAnimation(
 zkarlok,
 [img`
@@ -302,7 +301,7 @@ game.onUpdateInterval(1000, function () {
             . 5 5 . 4 4 4 4 4 4 4 4 4 . . . . . . . 
             . . . . 5 5 4 4 4 4 . . . . . . . . . . 
             . . . . . . 5 5 . . . . . . . . . . . . 
-            `, 20)
+            `)
     } else if (typ_ryby == 1) {
         ryba = vytvorRybu(img`
             . . . . . . . . . . . . . . . . . . . . 
@@ -326,7 +325,7 @@ game.onUpdateInterval(1000, function () {
             . 8 8 . 2 2 2 2 2 2 2 2 2 . . . . . . . 
             . . . . 8 8 2 2 2 2 . . . . . . . . . . 
             . . . . . . 8 8 . . . . . . . . . . . . 
-            `, 27)
+            `)
     } else if (typ_ryby == 2) {
         ryba = vytvorRybu(img`
             . . . . . . . . . . . . . . . . . . . . 
@@ -350,7 +349,7 @@ game.onUpdateInterval(1000, function () {
             . 6 6 . 7 7 7 7 7 7 7 7 7 . . . . . . . 
             . . . . 6 6 7 7 7 7 . . . . . . . . . . 
             . . . . . . 6 6 . . . . . . . . . . . . 
-            `, 34)
+            `)
     } else {
         ryba = vytvorRybu(img`
             . . . . . . . . . . . . . . . . . . . . 
@@ -374,6 +373,8 @@ game.onUpdateInterval(1000, function () {
             . c c . 4 4 5 4 5 4 4 4 4 . . . . . . . 
             . . . . c c 4 5 4 5 . . . . . . . . . . 
             . . . . . . c c . . . . . . . . . . . . 
-            `, 40)
+            `)
     }
+    ryba.setPosition(0, randint(0, 120))
+    ryba.vx = randint(20, 40)
 })
