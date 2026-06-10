@@ -2,7 +2,7 @@
 
 [🇨🇿 Česky](#česky) | [🇬🇧 English](#english)
 
-![Náhled hry / Game preview](assets/preview.png)
+![Náhled hry / Game preview](https://raw.githubusercontent.com/aglio-olio-bros/01-arcade-shark/main/assets/preview.png)
 
 ---
 
